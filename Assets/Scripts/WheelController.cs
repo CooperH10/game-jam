@@ -15,4 +15,10 @@ public class WheelController : MonoBehaviour
     {
         
     }
+
+    public Transform objectToRotateAround;
+    void RorateAroundObejct()
+    {
+        transform.RotateAround(objectToRotateAround.position, Vector3.up, 90);
+    }
 }
