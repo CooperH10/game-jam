@@ -7,6 +7,7 @@ public class GravityController : MonoBehaviour
 
     public GameObject Arrow;
     public float gravity = 9.8f;
+    public Vector2 gravDir = new Vector2(0,0);
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +21,15 @@ public class GravityController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             
-            float angle = Arrow.transform.localRotation.eulerAngles.z;
+            float angle = Arrow.transform.localRotation.eulerAngles.z + 90;
             Debug.Log(angle);
-            Vector2 grav = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)).normalized;
-            Physics2D.gravity = grav * gravity;
-
-            //Vector3 coords = Quaternion.Euler(0, angle, 0) * Vector3.right * mag;
+            gravDir = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)).normalized;
         }
         
+    }
+
+    private void FixedUpdate()
+    {
+        Physics2D.gravity = gravDir * gravity;
     }
 }
