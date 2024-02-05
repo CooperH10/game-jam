@@ -12,6 +12,9 @@ public class LevelGeneration : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject goalPrefab;
 
+    public GameObject Arrow;
+    public GameObject Pivot;
+
     //temporary:
     private string levelPath = "Assets/Levels/level1.txt";
 
@@ -51,11 +54,12 @@ public class LevelGeneration : MonoBehaviour
                         break;
                     case '.':
                         break;
-                    case 'S':
 
+                    case 'S':
                         InstantiateGameObject(spikePrefab, x, y);
                         //Code for Spikes after instantiation 
                         break;
+
                     case 'P':
                         
                         GameObject playerInstance = InstantiateGameObject(playerPrefab, x, y);

@@ -6,6 +6,8 @@ public class cameraFollowPlayer : MonoBehaviour
     public float smoothSpeed = 0.125f; 
     public Vector3 offset; 
 
+   
+
     void LateUpdate() 
     {
         if (player != null)
