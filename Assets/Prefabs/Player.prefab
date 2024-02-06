@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3935153857720178291}
   - component: {fileID: 9083306058800949103}
   - component: {fileID: 8754544351254538790}
-  - component: {fileID: 4574378787017866586}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -129,52 +128,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &4574378787017866586
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1919958628767275468}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Constraints: 4
 --- !u!1001 &8725529076919738195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -183,14 +137,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3271966690296645039}
     m_Modifications:
-    - target: {fileID: 238805557520527990, guid: cb07cc672a0f91443a9ce04d33be7e73, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.59
-      objectReference: {fileID: 0}
-    - target: {fileID: 238805557520527990, guid: cb07cc672a0f91443a9ce04d33be7e73, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.03
-      objectReference: {fileID: 0}
     - target: {fileID: 1152343527717003848, guid: cb07cc672a0f91443a9ce04d33be7e73, type: 3}
       propertyPath: m_Name
       value: Pivot
