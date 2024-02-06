@@ -25,6 +25,7 @@ public class GravityController : MonoBehaviour
             float angle = Arrow.transform.localRotation.eulerAngles.z + 90;
             Debug.Log(angle);
             gravDir = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)).normalized;
+            Debug.Log(gravDir);
         }
         
     }
