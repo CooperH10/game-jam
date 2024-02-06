@@ -52,6 +52,7 @@ public class GravityController : MonoBehaviour
         }
         if (collision.CompareTag("Goal"))
         {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             index++;
             LevelGeneration.Instance.GenerateLevel(index);
         }
