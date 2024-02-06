@@ -8,6 +8,7 @@ public class WheelController : MonoBehaviour
     Rigidbody2D rb;
     public Vector2 gravDirection;
     public float arrowSpeed = 45f;
+    public Transform objectToRotateAround;// useless but like fix later
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,7 @@ public class WheelController : MonoBehaviour
         }
     }
 
-    public Transform objectToRotateAround;
+    //rotating the arrow
     void RotateAroundObejct()
     {
         transform.RotateAround(transform.position, Vector3.forward, arrowSpeed * Time.deltaTime);

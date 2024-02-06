@@ -20,22 +20,27 @@ public class GravityController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //when you hit space you change the gravity
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            
+            //get the direction of the arrow
             float angle = Arrow.transform.localRotation.eulerAngles.z + 90;
-            Debug.Log(angle);
+            //Debug.Log(angle);
+            //change the gravity direction
             gravDir = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)).normalized;
-            Debug.Log(gravDir);
+            //Debug.Log(gravDir);
         }
         
     }
 
+
     private void FixedUpdate()
     {
+        //gravity update
         Physics2D.gravity = gravDir * gravity;
     }
 
+    //player death
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision != null)
