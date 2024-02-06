@@ -15,7 +15,7 @@ public class LevelGeneration : MonoBehaviour
     public GameObject Arrow;
     public GameObject Pivot;
 
-    //temporary:
+    //temporary, path to grab the level to play:
     private string levelPath = "Assets/Levels/level1.txt";
 
     
@@ -30,6 +30,7 @@ public class LevelGeneration : MonoBehaviour
         
     }
 
+    //put in player?
     GameObject InstantiateGameObject (GameObject toInstantiate, int x, int y)
     {
         return Instantiate(toInstantiate, new Vector3(x, -y, 0), Quaternion.identity);
@@ -37,6 +38,7 @@ public class LevelGeneration : MonoBehaviour
 
     void GenerateLevel()
     {
+        //get path of level and read
         string[] lines = File.ReadAllLines(levelPath);
 
         for (int y = 0; y < lines.Length; y++)
@@ -45,21 +47,25 @@ public class LevelGeneration : MonoBehaviour
             {
                 switch (lines[y][x])
                 {
+                    //wall
                     case '#':
                         InstantiateGameObject(wallPrefab, x, y);
                         break;
+                    //goal
                     case 'G':
                         InstantiateGameObject(goalPrefab, x, y);
                         //Code for Goal after instantiation 
                         break;
+                    //blank space
                     case '.':
                         break;
-
+                    //Spike, to die
                     case 'S':
                         InstantiateGameObject(spikePrefab, x, y);
                         //Code for Spikes after instantiation 
                         break;
 
+                    //player
                     case 'P':
                         
                         GameObject playerInstance = InstantiateGameObject(playerPrefab, x, y);
