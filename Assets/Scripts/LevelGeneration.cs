@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LevelGeneration : MonoBehaviour
 {
-
+    public static LevelGeneration Instance;
     //public int index = 0;
     public GameObject wallPrefab;
     public GameObject floorPrefab;
@@ -20,7 +20,10 @@ public class LevelGeneration : MonoBehaviour
 
     //temporary, path to grab the level to play:
     //private string levelPath = "Assets/Levels/level1.txt";
-
+    private void Awake()
+    {
+        Instance = this;
+    }
     public List<string> paths = new List<string>();
 
 

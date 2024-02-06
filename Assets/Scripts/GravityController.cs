@@ -12,7 +12,7 @@ public class GravityController : MonoBehaviour
     public Vector2 gravDir = new Vector2(0,0);
 
     public static int index = 0;
-    public LevelGeneration levelGen;
+    //public LevelGeneration levelGen;
 
     // Start is called before the first frame update
     void Start()
@@ -50,10 +50,10 @@ public class GravityController : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        else if (collision.CompareTag("Goal"))
+        if (collision.CompareTag("Goal"))
         {
             index++;
-            levelGen.GenerateLevel(index);
+            LevelGeneration.Instance.GenerateLevel(index);
         }
     }
 }
