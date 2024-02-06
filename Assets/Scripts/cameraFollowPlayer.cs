@@ -5,8 +5,13 @@ public class cameraFollowPlayer : MonoBehaviour
     public Transform player;
     public float smoothSpeed = 0.125f; // tracks more smoothly
     public Vector3 offset; // offset of camera
+    public float cameraScale = 10;
 
-   
+
+    private void Start()
+    {
+        Camera.main.orthographicSize = cameraScale;
+    }
 
     void FixedUpdate() 
     {
