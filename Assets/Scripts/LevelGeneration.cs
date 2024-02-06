@@ -32,6 +32,7 @@ public class LevelGeneration : MonoBehaviour
         paths.Add("Assets/Levels/starter_level.txt");
         paths.Add("Assets/Levels/spike-level.txt");
         paths.Add("Assets/Levels/level1.txt");
+        paths.Add("Assets/Levels/level3.txt");
         GenerateLevel(GravityController.index);
     }
 
