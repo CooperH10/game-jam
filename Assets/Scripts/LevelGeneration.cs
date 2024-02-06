@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class LevelGeneration : MonoBehaviour
 {
+
+    private int index = 0;
     public GameObject wallPrefab;
     public GameObject floorPrefab;
     //public GameObject enemyPrefab;
@@ -12,16 +14,22 @@ public class LevelGeneration : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject goalPrefab;
 
-    public GameObject Arrow;
-    public GameObject Pivot;
+    //public GameObject Arrow;
+    //public GameObject Pivot;
+
 
     //temporary, path to grab the level to play:
     private string levelPath = "Assets/Levels/level1.txt";
 
-    
+    public List<string> paths = new List<string>();
+
+
     void Start()
     {
         GenerateLevel();
+        paths.Add("Assets/Levels/starter_level.txt");
+        paths.Add("Assets/Levels/level1.txt");
+        paths.Add("Assets/Levels/spike-level.txt");
     }
 
     
