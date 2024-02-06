@@ -11,6 +11,9 @@ public class GravityController : MonoBehaviour
     public float gravity = 9.8f;
     public Vector2 gravDir = new Vector2(0,0);
 
+    public static int index = 0;
+    public LevelGeneration levelGen;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,9 +46,14 @@ public class GravityController : MonoBehaviour
     //player death
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision != null)
+        if (collision.CompareTag("Spike"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else if (collision.CompareTag("Goal"))
+        {
+            index++;
+            levelGen.GenerateLevel(index);
         }
     }
 }

@@ -983,12 +983,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallPrefab: {fileID: 3592449814351586165, guid: 5ea07d1308d8909418b57a42666373ef, type: 3}
-  floorPrefab: {fileID: 3592449814351586165, guid: 5ea07d1308d8909418b57a42666373ef, type: 3}
+  floorPrefab: {fileID: 212399948895958487, guid: f80964765f1ea4dfe9779e3dd912da40, type: 3}
   spikePrefab: {fileID: 5604662154076551426, guid: 386b560d022d971438421faa23d286d5, type: 3}
   playerPrefab: {fileID: 1919958628767275468, guid: 020dd9b0836d6e840bf8d66286bce320, type: 3}
   goalPrefab: {fileID: 5566557731969774902, guid: 9b2900354a880f54da619dc82504d892, type: 3}
-  Arrow: {fileID: 0}
-  Pivot: {fileID: 0}
+  paths: []
 --- !u!4 &1776421199
 Transform:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ using UnityEngine;
 public class LevelGeneration : MonoBehaviour
 {
 
-    private int index = 0;
+    //public int index = 0;
     public GameObject wallPrefab;
     public GameObject floorPrefab;
     //public GameObject enemyPrefab;
@@ -19,17 +19,17 @@ public class LevelGeneration : MonoBehaviour
 
 
     //temporary, path to grab the level to play:
-    private string levelPath = "Assets/Levels/level1.txt";
+    //private string levelPath = "Assets/Levels/level1.txt";
 
     public List<string> paths = new List<string>();
 
 
     void Start()
     {
-        GenerateLevel();
         paths.Add("Assets/Levels/starter_level.txt");
-        paths.Add("Assets/Levels/level1.txt");
         paths.Add("Assets/Levels/spike-level.txt");
+        paths.Add("Assets/Levels/level1.txt");
+        GenerateLevel(0);
     }
 
     
@@ -39,15 +39,15 @@ public class LevelGeneration : MonoBehaviour
     }
 
     //put in player?
-    GameObject InstantiateGameObject (GameObject toInstantiate, int x, int y)
+    static GameObject InstantiateGameObject (GameObject toInstantiate, int x, int y)
     {
         return Instantiate(toInstantiate, new Vector3(x, -y, 0), Quaternion.identity);
     }
 
-    void GenerateLevel()
+    public void GenerateLevel(int index)
     {
         //get path of level and read
-        string[] lines = File.ReadAllLines(levelPath);
+        string[] lines = File.ReadAllLines(paths[index]);
 
         for (int y = 0; y < lines.Length; y++)
         {
