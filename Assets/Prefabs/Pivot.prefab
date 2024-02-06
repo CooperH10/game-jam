@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arrow_0
       objectReference: {fileID: 0}
+    - target: {fileID: 4930877879450988112, guid: 57b49b3744afa47079eaa46bd12cac55, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292434325709791724, guid: 57b49b3744afa47079eaa46bd12cac55, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.340521
+      objectReference: {fileID: 0}
     - target: {fileID: 7292434325709791724, guid: 57b49b3744afa47079eaa46bd12cac55, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.59
