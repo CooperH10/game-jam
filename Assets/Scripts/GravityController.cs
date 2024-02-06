@@ -5,7 +5,8 @@ using UnityEngine;
 public class GravityController : MonoBehaviour
 {
 
-    private GameObject Arrow = GameObject.FindGameObjectWithTag("Arrow");
+    //private GameObject Arrow = GameObject.FindGameObjectWithTag("Arrow");
+    public GameObject Arrow;
     public float gravity = 9.8f;
     public Vector2 gravDir = new Vector2(0,0);
 
